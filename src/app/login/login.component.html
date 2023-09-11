@@ -1,0 +1,23 @@
+<img class="logo" src="assets/Logo.png" alt="logo">
+<!--Form-->
+<form class="form-register" color="primary">
+    <mat-form-field>
+        <mat-label>Email</mat-label>
+        <input [(ngModel)]="email" name="email" type="email" matInput>
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Contraseña</mat-label>
+        <input [(ngModel)]="password" name="password" type="password" matInput>
+    </mat-form-field>
+
+<!--Button-->
+<button mat-button style="margin-left: 5%; text-decoration-line: underline; ">Olvidaste tu Contraseña</button>
+<div></div>
+<button mat-flat-button color="primary" style="width: 100%; margin-top: 3%;" (click)="navigateWelcomePage()">Login</button>
+
+<p style="margin-left: 25%; margin-top: 5%;">¿No tienes una cuenta aún? 
+    <button mat-button color="primary" style="text-decoration-line: underline;" (click)="navigateSignUp()">Crear cuenta</button> 
+</p>
+</form>
+

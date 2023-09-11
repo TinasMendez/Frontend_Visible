@@ -1,0 +1,20 @@
+<div class="results">
+
+<h4 style="margin-top:70px;margin-bottom: 50px;">¡Listo!<br>Este es tu nuevo perfil de Linkedin </h4>
+
+<p>Tagline</p>
+<mat-form-field style="width: 100%">
+<input matInput [value]="dataFromBackend1" readonly/>
+</mat-form-field>
+
+<p>Ejes temáticos</p>
+<mat-chip-listbox [multiple]="true">
+  <mat-chip *ngFor="let item of dataFromBackend2" [value]="item">{{ item }}</mat-chip>
+</mat-chip-listbox>
+
+<p>Acerca de ti</p>
+<mat-form-field style="width: 100%">
+<input matInput [value]="dataFromBackend3" readonly/>
+</mat-form-field>
+
+</div>

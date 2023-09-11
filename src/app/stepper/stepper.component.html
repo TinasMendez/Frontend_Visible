@@ -1,0 +1,102 @@
+
+<!--Stepper-->
+<div class="stepper-container">
+    <mat-horizontal-stepper>
+
+    <!--Step 1-->
+        <mat-step class="Step 1">
+        <div class="container 1">
+        <h4 style="margin-top: 50px;">Cuéntanos sobre ti</h4>
+        <form style="margin-top: 80px;">
+            <p>¿Con qué cargo te identificas?</p>
+            <mat-form-field style="width: 100%">
+                <mat-label>Selecciona una opción</mat-label>
+                <mat-select>
+                    <mat-option *ngFor="let job of jobs" [value]="job.value">
+                        {{ job.viewValue }}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+
+            <p style="margin-top: 20px;">¿En qué industria trabajas?</p>
+            <mat-form-field style="width: 100%">
+                <mat-label>Selecciona una opción</mat-label>
+                <mat-select>
+                    <mat-option *ngFor="let industry of industry" [value]="industry. value">
+                        {{ industry.viewValue}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>   
+        </form>
+        <div>
+            <button mat-flat-button matStepperNext color="primary">Continuar</button>
+        </div>
+        </div>
+        </mat-step>
+
+    <!--Step 2-->
+    <mat-step class="Step2">
+        <h4>Cuéntanos sobre ti</h4>
+        <p class="intro">Si pudieras ser un famoso, ¿Cuál de estos serías?</p>
+        <mat-chip-listbox multiple class="celebrities">
+          <mat-chip *ngFor="let option of celebrityOptions" [value]="option" (click)="toggleSelection(option)" [ngClass]="{'selected': isSelected(option)}">{{ option }}</mat-chip>
+        </mat-chip-listbox>
+        <button mat-flat-button matStepperNext color="primary">Continuar</button>
+    </mat-step>
+
+    <!--Step 3-->
+        <mat-step class="Step 3">
+
+            <h4>Cuéntanos sobre ti</h4>
+
+            <p class="intro">Responde algunas preguntas para ayudarnos a <br> generar contenido alineado a tus objetivos</p>
+            <div></div>
+            <p style="width: 100%">1. ¿Cuál es tu experiencia y formación profesional?</p>
+            <mat-form-field style="width: 100%">
+                <input matInput placeholder/>
+            </mat-form-field>
+
+            <p style="width: 100%">2. ¿Cómo te gustaría marcar la diferencia en tu industria o comunidad?</p>
+            <mat-form-field style="width: 100%">
+                <input matInput placeholder/>
+            </mat-form-field>
+
+            <p style="width: 100%">3. ¿Cuál es tu misión o propósito profesional?</p>
+            <mat-form-field style="width: 100%">
+                <input matInput placeholder/>
+            </mat-form-field>
+
+            <div></div>
+        <button mat-flat-button matStepperNext color="primary">Continuar</button>
+        </mat-step>
+
+    <!--Step 4-->
+        <mat-step class="Step 4">
+            <h4>Cuéntanos sobre ti</h4>
+            <p class="intro">¿Con qué frases o palabras quieres que otros te reconozcan?</p>
+            <div></div>
+
+            <p>Frase o palabra #1</p>
+            <mat-form-field style="width: 100%">
+                <input matInput [(ngModel)]="userInput1"/>
+            </mat-form-field>
+
+            <p>Frase o palabra #2</p>
+            <mat-form-field style="width: 100%">
+                <input matInput [(ngModel)]="userInput2"/>
+            </mat-form-field>
+
+            <p>Frase o palabra #3</p>
+            <mat-form-field style="width: 100%">
+                <input matInput [(ngModel)]="userInput3"/>
+            </mat-form-field>
+
+            <div></div>
+            <button mat-flat-button matStepperNext color="primary"(click)="navigateProfileResult()">Continuar</button>
+        </mat-step>
+    </mat-horizontal-stepper>
+</div>
+
+<!--??-->
+
+<!--Button-->

@@ -1,0 +1,13 @@
+<mat-toolbar color="primary" *ngIf="sharedService.showToolbar">
+  <img src="assets/Logo blanco.png" alt="logo">
+  <span class="toolbar-spacer"></span>
+  <mat-list>
+      <img src="assets/Publicaciones.png" alt="publicaciones">
+      <button mat-button>Publicaciones</button>
+      <img src="assets/Perfil.png" alt="perfil">
+      <button mat-button>Perfil</button>
+      <img src="assets/Exit.png" alt="perfil">
+  </mat-list>
+</mat-toolbar>
+<router-outlet></router-outlet>
+

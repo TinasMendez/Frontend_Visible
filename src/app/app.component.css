@@ -1,0 +1,13 @@
+.toolbar-spacer {
+    flex: 1;
+    width: 1280px;
+    height: 52px;
+}
+
+.button {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+    padding: 30px;
+}
